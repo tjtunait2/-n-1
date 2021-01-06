@@ -52,10 +52,10 @@
                   </JFXButton>
                 <AnchorPane fx:id="paneNameApp" layoutX="27.0" layoutY="27.0" prefHeight="42.0" prefWidth="208.0" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="27.0">
                     <children>
-                  <ImageView fitHeight="36.0" fitWidth="34.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url(&quot;file:resources/images/book_logo.png&quot;);" />
-                        <Label fx:id="labelNameApp" alignment="TOP_LEFT" layoutX="37.0" layoutY="12.0" prefHeight="23.0" prefWidth="171.0" text="Library Managemet" textFill="#f5f3f3">
+                  <ImageView fitHeight="36.0" fitWidth="69.0" layoutX="-35.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: url(&quot;file:resources/images/book_logo.png&quot;);" />
+                        <Label fx:id="labelNameApp" alignment="TOP_LEFT" layoutX="3.0" layoutY="12.0" prefHeight="61.0" prefWidth="233.0" text="Library Management System" textFill="#f5f3f3">
                             <font>
-                                <Font name="Verdana" size="17.0" />
+                                <Font name="Verdana" size="14.0" />
                             </font>
                         </Label>
                     </children>
