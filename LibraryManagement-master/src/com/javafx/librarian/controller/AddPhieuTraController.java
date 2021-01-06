@@ -234,6 +234,7 @@ public class AddPhieuTraController implements Initializable {
         listDG = FXCollections.observableArrayList(DocGiaDao.getInstance().getListDocGiaToPhieuTraCB());
         cbMaDG.setTooltip(new Tooltip());
         cbMaDG.getItems().addAll(listDG);
+        cbMaPM.setDisable(true);
         cbMaDG.getSelectionModel().selectFirst();
         String maDocGia = getListPMByDocGia();
         dtNgayTra.setValue(LocalDate.now());

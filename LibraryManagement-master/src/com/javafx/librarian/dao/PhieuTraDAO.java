@@ -134,20 +134,20 @@ public class PhieuTraDAO {
         }
 
         try (Connection conn = JDBCConnection.getJDBCConnection()) {
-            PreparedStatement ps1 = conn.prepareStatement("update tbsach set tinhtrang=? where masach=?");
-            if(ctPhieuTra.getTinhTrang().equals("Bình thường"))
+            PreparedStatement ps1 = conn.prepareStatement("update tbsach set tinhtrang=tinhtrang+1 where masach=?");
+            /*if(ctPhieuTra.getTinhTrang().equals("Bình thường"))
             {
-                ps1.setInt(1, 0);
+
             }
             else if (ctPhieuTra.getTinhTrang().equals("Hư hỏng"))
             {
-                ps1.setInt(1, 2);
+                ps1.setString(1, "tinhtrang");
             }
             else if (ctPhieuTra.getTinhTrang().equals("Mất"))
             {
-                ps1.setInt(1, 3);
-            }
-            ps1.setString(2, ctPhieuTra.getMaSach());
+                ps1.setString(1, "tinhtrang");
+            }*/
+            ps1.setString(1, ctPhieuTra.getMaSach());
             res = ps1.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

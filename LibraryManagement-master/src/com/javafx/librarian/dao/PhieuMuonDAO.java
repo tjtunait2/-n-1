@@ -132,7 +132,7 @@ public class PhieuMuonDAO {
         }
 
         try (Connection conn = JDBCConnection.getJDBCConnection()) {
-            PreparedStatement ps1 = conn.prepareStatement("update tbsach set tinhtrang=1 where masach=?");
+            PreparedStatement ps1 = conn.prepareStatement("update tbsach set tinhtrang=tinhtrang-1 where masach=?");
             ps1.setString(1, ctphieuMuon.getMaSach());
             res = ps1.executeUpdate();
         } catch (Exception e) {

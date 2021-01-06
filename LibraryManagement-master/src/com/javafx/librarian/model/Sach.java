@@ -159,15 +159,15 @@ public class Sach {
         NgayNhap = new SimpleObjectProperty<Date>(ngayNhap);
         TriGia = new SimpleIntegerProperty(triGia);
         SoLuong = new SimpleIntegerProperty(soLuong);
-        if(tinhTrang == 0)
+        if(tinhTrang > 0)
         {
             TinhTrang = new SimpleStringProperty("Trống");
         }
-        else if(tinhTrang == 1)
+        else if(tinhTrang == 0)
         {
-            TinhTrang = new SimpleStringProperty("Đang mượn");
+            TinhTrang = new SimpleStringProperty("Đã mượn hết");
         }
-        else if(tinhTrang == 2)
+        else if(tinhTrang == 233)
         {
             TinhTrang = new SimpleStringProperty("Hư hỏng");
         }

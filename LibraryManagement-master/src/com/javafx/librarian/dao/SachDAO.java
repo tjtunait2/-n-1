@@ -81,7 +81,8 @@ public class SachDAO {
             ps.setString(6, sach.getNXB());
             ps.setDate(7, Date.valueOf(Util.convertDateToLocalDate(sach.getNgayNhap())));
             ps.setInt(8, sach.getTriGia());
-            ps.setInt(9, sach.getTinhTrang() == "Trống" ? 0 : 1);
+           // ps.setInt(9, sach.getTinhTrang() == "Trống" ? sach.getSoLuong() : 0);
+            ps.setInt(9, sach.getSoLuong());
             ps.setBinaryStream(10, sach.getAnhBia(), sach.getAnhBia().available());
             ps.setInt(11, sach.getSoLuong());
             res = ps.executeUpdate();
@@ -115,8 +116,8 @@ public class SachDAO {
             ps.setInt(7, sach.getTriGia());
             ps.setInt(8, tinhTrang);
             ps.setBinaryStream(9, sach.getAnhBia());
-            ps.setString(10, sach.getMaSach());
-            ps.setInt(11, sach.getSoLuong());
+            ps.setString(11, sach.getMaSach());
+            ps.setString(10, ""+sach.getSoLuong());
             res = ps.executeUpdate();
 
         } catch (Exception e) {
